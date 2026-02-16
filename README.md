@@ -2,7 +2,7 @@
 
 Download public Facebook reels and videos to local MP4 files.
 
-This repository is organized in a marketplace-compatible layout, with installable files under `skill/`.
+This repository is organized in a marketplace-compatible layout, with installable files under `skills/fb-reel-downloader/`.
 
 It is tool-agnostic and can be used in agent setups such as opencode, claude code, roo, codex, and cursor.
 
@@ -19,10 +19,11 @@ It is tool-agnostic and can be used in agent setups such as opencode, claude cod
 fb-reel-downloader/
 ├── README.md
 ├── .gitignore
-└── skill/
-    ├── SKILL.md
-    └── scripts/
-        └── fb_downloader.py
+└── skills/
+    └── fb-reel-downloader/
+        ├── SKILL.md
+        └── scripts/
+            └── fb_downloader.py
 ```
 
 ## Prerequisites
@@ -41,21 +42,21 @@ Install `ffmpeg`:
 Run from repository root:
 
 ```bash
-python skill/scripts/fb_downloader.py <facebook_url> [output_directory]
+python skills/fb-reel-downloader/scripts/fb_downloader.py <facebook_url> [output_directory]
 ```
 
 With `uv`:
 
 ```bash
-uv run skill/scripts/fb_downloader.py <facebook_url> [output_directory]
+uv run skills/fb-reel-downloader/scripts/fb_downloader.py <facebook_url> [output_directory]
 ```
 
 Examples:
 
 ```bash
-python skill/scripts/fb_downloader.py https://www.facebook.com/reel/856954873853388
-python skill/scripts/fb_downloader.py https://www.facebook.com/watch?v=1234567890 ~/Downloads
-python skill/scripts/fb_downloader.py https://fb.watch/abcDEF12/
+python skills/fb-reel-downloader/scripts/fb_downloader.py https://www.facebook.com/reel/856954873853388
+python skills/fb-reel-downloader/scripts/fb_downloader.py https://www.facebook.com/watch?v=1234567890 ~/Downloads
+python skills/fb-reel-downloader/scripts/fb_downloader.py https://fb.watch/abcDEF12/
 ```
 
 ## Supported URL Formats
@@ -73,5 +74,5 @@ python skill/scripts/fb_downloader.py https://fb.watch/abcDEF12/
 
 ## Repository Notes
 
-- Keep installable files in `skill/`.
+- Keep installable files in `skills/<skill-name>/`.
 - Avoid committing downloaded media outputs.
