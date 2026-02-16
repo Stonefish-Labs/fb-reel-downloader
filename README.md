@@ -2,7 +2,9 @@
 
 Download public Facebook reels and videos to local MP4 files.
 
-This repository is organized in marketplace-compatible layout, with installable skill content under `skill/`.
+This repository is organized in a marketplace-compatible layout, with installable files under `skill/`.
+
+It is tool-agnostic and can be used in agent setups such as opencode, claude code, roo, codex, and cursor.
 
 ## Features
 
@@ -69,8 +71,7 @@ python skill/scripts/fb_downloader.py https://fb.watch/abcDEF12/
 - Private, region-locked, or login-required videos may fail.
 - Facebook markup/API changes can break extraction patterns.
 
-## GitHub Submission Notes
+## Repository Notes
 
-- Keep installable skill files in `skill/`.
+- Keep installable files in `skill/`.
 - Avoid committing downloaded media outputs.
-- Add a license file before public release if you want explicit reuse terms.
